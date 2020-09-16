@@ -1,0 +1,9 @@
+package example;
+
+public class Print1 {
+
+	public Print1() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
