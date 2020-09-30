@@ -14,6 +14,11 @@ public class ContactsUse {
 	}
 
 	public static void main(String[] args) {
+		String firstName = "Eric";
+		String lastName = new String();
+		lastName = "Broadbent";
+		String midName;
+		midName = "Sean";
 		new ContactsUse();
 
 	}
