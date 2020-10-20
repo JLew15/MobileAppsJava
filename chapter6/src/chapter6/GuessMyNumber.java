@@ -88,6 +88,7 @@ public class GuessMyNumber {
 	else {
 		System.out.println("YOU LOSE");
 	}
+	input.close();
 	}
 	public static void main(String[] args) {
 		new GuessMyNumber();
