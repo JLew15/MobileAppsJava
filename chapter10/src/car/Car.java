@@ -2,12 +2,9 @@ package car;
 import car.carComponents.*;
 import java.util.*;
 
-public class Car {
+public class Car extends Vehicle {
 	String color;
-	String brand;
 	Integer numDoors;
-	Integer numWheels;
-	Double price;
 	Long hardware;
 	Engine engine = new Engine();
 	Scanner input = new Scanner(System.in);
@@ -35,6 +32,9 @@ public class Car {
 		else {
 			System.out.println("I'm just drivin man.");
 		}
+	}
+	public void start() {
+		System.out.println("You started the car.");
 	}
 
 }
