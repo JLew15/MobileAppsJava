@@ -14,12 +14,12 @@ public class Car extends Vehicle {
 		System.out.println("What color is your car?");
 		color = input.nextLine();
 		System.out.println("What manufacturer is your car?");
-		brand = input.nextLine();
+		setBrand(input.nextLine());
 		System.out.println("How many doors are on it?");
 		numDoors = input.nextInt();
-		numWheels = 4;
+		setNumWheels(4);
 		System.out.println("How much does your car cost?");
-		price = input.nextDouble();
+		setPrice(input.nextDouble());
 		
 		input.close();
 		
