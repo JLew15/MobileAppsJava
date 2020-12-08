@@ -14,6 +14,7 @@ public class School {
 		System.out.println(jaidenL.getLunchNum());
 		System.out.println(jaidenL.getEmail());
 		System.out.println(jaidenL.getPhone());
+		System.out.println(jaidenL.getClasses());
 	}
 
 	public static void main(String[] args) {
