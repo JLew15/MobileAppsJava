@@ -44,16 +44,17 @@ public class ButtonExperiments {
 		JButton button6 = new JButton("2");
 		JButton button7 = new JButton("3");
 		JButton button8 = new JButton("4");
+		JButton button9 = new JButton("5");
 		
-		JButton button9 = new JButton("1");
-		JButton button10 = new JButton("2");
-		JButton button11 = new JButton("3");
-		JButton button12 = new JButton("4");
+		JButton button10 = new JButton("1");
+		JButton button11 = new JButton("2");
+		JButton button12 = new JButton("3");
+		JButton button13 = new JButton("4");
 		
-		JButton button13 = new JButton("1");
-		JButton button14 = new JButton("2");
-		JButton button15 = new JButton("3");
-		JButton button16 = new JButton("4");
+		JButton button14 = new JButton("1");
+		JButton button15 = new JButton("2");
+		JButton button16 = new JButton("3");
+		JButton button17 = new JButton("4");
 		
 		tLPane.add(button1);
 		tLPane.add(button2);
@@ -63,21 +64,22 @@ public class ButtonExperiments {
 		tRPane.add(button5,BorderLayout.PAGE_START);
 		tRPane.add(button6,BorderLayout.PAGE_END);
 		tRPane.add(button7,BorderLayout.CENTER);
-		tRPane.add(button8,BorderLayout.LINE_END);
+		tRPane.add(button8,BorderLayout.LINE_START);
+		tRPane.add(button9,BorderLayout.LINE_END);
 		
-		bLPane.add(button9);
 		bLPane.add(button10);
 		bLPane.add(button11);
 		bLPane.add(button12);
+		bLPane.add(button13);
 		
 		button13.setAlignmentY(Component.CENTER_ALIGNMENT);
-		bRPane.add(button13);
-		button14.setAlignmentY(Component.CENTER_ALIGNMENT);
 		bRPane.add(button14);
-		button15.setAlignmentY(Component.CENTER_ALIGNMENT);
+		button14.setAlignmentY(Component.CENTER_ALIGNMENT);
 		bRPane.add(button15);
-		button16.setAlignmentY(Component.CENTER_ALIGNMENT);
+		button15.setAlignmentY(Component.CENTER_ALIGNMENT);
 		bRPane.add(button16);
+		button16.setAlignmentY(Component.CENTER_ALIGNMENT);
+		bRPane.add(button17);
 	}
 
 	public static void main(String[] args) {
