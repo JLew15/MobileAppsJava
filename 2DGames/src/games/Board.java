@@ -7,26 +7,30 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.Arc2D;
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 
-public class Board extends JPanel{
+public class Board extends JPanel implements ActionListener{
 	Image img;
-	String location = "src/res/img/gastertime.png";
+	String[] location = {"src/res/img/gastertime.png","src/res/img/reee.png"};
 	
-	private void initBoard() {
-		loadImage();
+	public void initBoard(int i) {
+		loadImage(i);
 		int w = img.getWidth(this);
 		int h = img.getHeight(this);
 		setPreferredSize(new Dimension(w,h));
+		
 	}
 	
-	private void loadImage() {
-		ImageIcon imgi = new ImageIcon(location);
+	private void loadImage(int i) {
+		ImageIcon imgi = new ImageIcon(location[i]);
 		img = imgi.getImage();
 	}
 	
@@ -60,7 +64,20 @@ public class Board extends JPanel{
 	}
 
 	public Board() {
-		initBoard();
+		
+	
+		
+	}
+	public void reDraw(int i, Graphics g) {
+		loadImage(i);
+		g.drawImage(img,0,0,null);
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		
 		
 	}
 
