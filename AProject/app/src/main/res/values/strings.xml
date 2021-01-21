@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AProject</string>
+    <string name="hmnj">Hello, my name is Jaiden.</string>
+    <string name="mybd">My birthday is January 1st of 1991.</string>
+    <string name="noidea">I have no idea what you want me to do.</string>
+</resources>

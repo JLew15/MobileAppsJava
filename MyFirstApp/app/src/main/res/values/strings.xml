@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyFirstApp</string>
+    <string name="button">Submit</string>
+    <string name="hint">Enter your name.</string>
+    <string name="namebox">Enter your name.</string>
+    <string name="textview">Hello Mr. Roboto</string>
+</resources>
