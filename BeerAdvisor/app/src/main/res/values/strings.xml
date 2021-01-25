@@ -1,4 +1,24 @@
 <resources>
-    <string name="app_name">BeerAdvisor</string>
-    <string name="students">CLICK OR TOUCH</string>
+    <!--USED STRINGS-->
+    <string name="app_name">BeerAdviser</string>
+    <string name="booton">Find Drink</string>
+    <string name="brands">No Drink Selected</string>
+    <!--UNUSED STRINGS/LEGAL DOCS-->
+    <string name="myName">Jaiden Lewis</string>
+    <string name="companyName">TCSD</string>
+    <string name="versionNumber">0.0.1</string>
+    <string name="illustrator">Google Inc.</string>
+    <string name="currentLanguage">English</string>
+    <string name="developers">Jaiden Lewis</string>
+
+    <string-array name="drinkArray">
+        <item>Clear</item>
+        <item>Dark Cola</item>
+        <item>Punch</item>
+        <item>Diet</item>
+        <item>Zero Sugar</item>
+        <item>Energy</item>
+        <item>Tea</item>
+        <item>Coffee</item>
+    </string-array>
 </resources>
