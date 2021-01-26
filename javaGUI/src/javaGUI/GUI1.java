@@ -56,6 +56,7 @@ public class GUI1 implements ActionListener{
 		    }
 		    sdl.drain();
 		    sdl.stop();
+		    
 		  }
 
 	public static void main(String[] args) {
