@@ -10,6 +10,7 @@
     <string name="illustrator">Google Inc.</string>
     <string name="currentLanguage">English</string>
     <string name="developers">Jaiden Lewis</string>
+    <string name="Label">You clicked the button.</string>
 
     <string-array name="drinkArray">
         <item>Clear</item>
