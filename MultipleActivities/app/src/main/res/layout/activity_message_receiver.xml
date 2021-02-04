@@ -14,6 +14,14 @@
         android:text="TextView"
         android:textSize="36sp" />
 
+    <EditText
+        android:id="@+id/enterAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Age" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"

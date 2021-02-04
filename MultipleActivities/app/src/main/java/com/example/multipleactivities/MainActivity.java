@@ -11,8 +11,6 @@ import android.widget.EditText;
 import java.lang.annotation.Target;
 
 public class MainActivity extends Activity {
-    public static String baba;
-    EditText text;
 
 
 
@@ -21,12 +19,16 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        text = (EditText)findViewById(R.id.textEntry);
 
     }
         public void onSendMessage(View view){
             Intent intent1 = new Intent(this, MessageReceiver.class);
-            baba = text.getText().toString();
+            EditText entryBox = (EditText)findViewById(R.id.textEntry);
+            EditText ageEntryBox = (EditText)findViewById(R.id.ageEntry);
+            String ageNum = ageEntryBox.getText().toString();
+            String value = entryBox.getText().toString();
+            intent1.putExtra("Name", value);
+            intent1.putExtra("Age", ageNum);
             startActivity(intent1);
         }
 

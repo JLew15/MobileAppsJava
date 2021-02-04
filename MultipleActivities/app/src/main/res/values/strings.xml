@@ -2,5 +2,6 @@
     <string name="app_name">Multiple Activities</string>
     <string name="label">Submit Message</string>
     <string name="textEntry">Enter Message</string>
+    <string name="textEnter">Enter Age</string>
     <string name="submit">Submit Message</string>
 </resources>

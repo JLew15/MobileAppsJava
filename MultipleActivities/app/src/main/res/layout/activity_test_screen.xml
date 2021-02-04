@@ -8,23 +8,15 @@
     <TextView
         android:id="@+id/label"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <EditText
-        android:id="@+id/textEntry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:editable="false"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:textAllCaps="false"
-        android:textSize="24sp" />
+        android:layout_height="83dp"
+        android:text="TextView"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Button"
+        android:onClick="onClick"/>
+
 </LinearLayout>

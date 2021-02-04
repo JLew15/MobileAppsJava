@@ -21,6 +21,16 @@
         android:text="@string/textEntry"
         android:textAllCaps="false"
         android:textSize="24sp" />
+    <EditText
+        android:id="@+id/ageEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/covered_by_your_grace"
+        android:inputType="textPersonName"
+        android:text="@string/textEnter"
+        android:textAllCaps="false"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/submit"
