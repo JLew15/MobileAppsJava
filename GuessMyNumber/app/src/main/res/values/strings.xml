@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GuessMyNumber</string>
+    <string name="welcome">Welcome to the Guess my Number game</string>
+    <string name="instructions">Pick a number between 1 and 10</string>
+    <string name="correct">You got the number right. Nice!</string>
+    <string name="incorrect">You got it wrong... failure.</string>
+    <string name="higher">Guess higher</string>
+    <string name="lower">Guess lower</string>
+    <string name="button">Guess</string>
+
+
+
+    <string name="author">Jay</string>
+    <string name="company">TCSD</string>
+    <string name="contact">marryapig@hotmail.com</string>
+    <string name="version">0.0.1</string>
+</resources>
