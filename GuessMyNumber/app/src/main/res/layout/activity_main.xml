@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcomeLabel"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="@string/welcome"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/numberEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/instructionsLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/instructions"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/guessButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="@string/button"
+        android:onClick="onGuess"/>
+
+    <TextView
+        android:id="@+id/testOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TextView" />
+
+</LinearLayout>
