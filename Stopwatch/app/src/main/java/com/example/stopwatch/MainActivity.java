@@ -12,18 +12,18 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
     private Boolean running = false;
     private Integer seconds = 0;
+    private Boolean wasRunning = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(savedInstanceState != null) {
+            running = savedInstanceState.getBoolean("running");
+            seconds = savedInstanceState.getInt("seconds");
+            wasRunning = savedInstanceState.getBoolean("wasRunning");
+        }
         setContentView(R.layout.activity_main);
         runTimer();
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Intent intent = new Intent(this, MainActivity2.class);
-        startActivity(intent);
     }
     public void onClickStart(View view){
         running = true;
@@ -56,6 +56,39 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        if(wasRunning) {
+            running = true;
+        }
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("seconds", seconds);
+        savedInstanceState.putBoolean("running", running);
+        savedInstanceState.putBoolean("wasRunning", wasRunning);
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+        wasRunning = running;
+        running = false;
     }
 
 }

@@ -12,15 +12,19 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     int tries = 3;
-    Integer ranNum;
+    Random r = new Random();
+    Integer ranNum = r.nextInt(10) + 1;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Random r = new Random();
-        ranNum = r.nextInt(10);
-        ranNum ++;
         super.onCreate(savedInstanceState);
+        if(savedInstanceState != null){
+            ranNum = savedInstanceState.getInt("ranNum");
+            tries = savedInstanceState.getInt("tries");
+        }
+        ranNum = getIntent().getIntExtra("ranNum", ranNum);
+        tries = getIntent().getIntExtra("tries", tries);
         setContentView(R.layout.activity_main);
         TextView test = (TextView)findViewById(R.id.testOutput);
         test.setText(ranNum.toString());
@@ -37,4 +41,10 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("guess",guessNum);
         startActivity(intent);
         }
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("ranNum", ranNum);
+        savedInstanceState.putInt("tries", tries);
+    }
     }

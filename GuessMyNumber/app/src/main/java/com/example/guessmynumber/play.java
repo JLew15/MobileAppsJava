@@ -9,13 +9,15 @@ import android.widget.TextView;
 
 public class play extends AppCompatActivity {
     Integer tries;
+    Integer ranNum;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
         Integer guess = getIntent().getIntExtra("guess",0);
-        Integer ranNum = getIntent().getIntExtra("number", 0);
+        ranNum = getIntent().getIntExtra("number", 0);
         tries = getIntent().getIntExtra("tries", 0);
         TextView guessText = (TextView)findViewById(R.id.guess);
         guessText.setText("You guessed " + guess.toString());
@@ -38,7 +40,6 @@ public class play extends AppCompatActivity {
                 }
                 else{
                     highLow.setText("Guess again.");
-                    tries --;
                 }
             }
             else{
@@ -46,9 +47,18 @@ public class play extends AppCompatActivity {
             }
         }
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("ranNum", ranNum);
+        savedInstanceState.putInt("tries", tries);
+    }
     public void buttonClick(View view){
         if(tries > 0){
             Intent backToGuess = new Intent(this, MainActivity.class);
+            backToGuess.putExtra("ranNum", ranNum);
+            backToGuess.putExtra("tries", tries);
             startActivity(backToGuess);
         }
     }
