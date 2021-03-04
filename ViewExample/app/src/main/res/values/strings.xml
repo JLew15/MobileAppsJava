@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ViewExample</string>
+    <string-array name="spinnervalues">
+        <item>Burnt</item>
+        <item>Light</item>
+        <item>Golden</item>
+    </string-array>
 </resources>
