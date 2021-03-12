@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OrderApplication</string>
+    <string-array name="coffeetemp">
+        <item>Iced</item>
+        <item>Hot</item>
+        <item>Frappe</item>
+        <item>Latte</item>
+    </string-array>
+</resources>

@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import org.w3c.dom.Text;
@@ -102,9 +103,17 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView img = (ImageView)findViewById(R.id.imageView);
         int image = R.drawable.ic_launcher_background;
-        String description = "Python Logo";
+        String description = "Background Photo";
+        if (jelly.equals("Grape") && toast.equals("Golden") && bread.contains("Wheat")){
+            image = R.drawable.bubblegum;
+            description = "Duke Nukem";
+        }
         img.setImageResource(image);
         img.setContentDescription(description);
+        CharSequence text = "This is a toast message.";
+        int duration = Toast.LENGTH_LONG;
+        Toast toaster = Toast.makeText(this, text, duration);
+        toaster.show();
     }
 
     public void radioChecked(View view){
