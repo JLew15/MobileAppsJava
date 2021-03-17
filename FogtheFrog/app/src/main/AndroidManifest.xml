@@ -4,20 +4,20 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/froggie"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/froggie"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HighScores"></activity>
-        <activity android:name=".GameOver" />
-        <activity android:name=".Game">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".OptionsScreen" />
+        <activity android:name=".TitleScreen"><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
+        <activity android:name=".HighScores" />
+        <activity android:name=".GameOver" />
+        <activity android:name=".Game" />
     </application>
 
 </manifest>
