@@ -34,6 +34,12 @@ public class Game extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game);
+        /*Bundle bundle = getIntent().getExtras();
+        playerName = bundle.getString("name");
+        difficultyLevel = bundle.getInt("difficulty");
+        numMoles = bundle.getInt("numMoles");
+        standardDuration = bundle.getInt("duration");*/
+
 
         initButtons();
         setNewMole();
