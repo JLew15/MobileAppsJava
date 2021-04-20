@@ -3,6 +3,7 @@ package com.example.fogthefrog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -39,6 +40,12 @@ public class Game extends AppCompatActivity implements View.OnClickListener{
         difficultyLevel = bundle.getInt("difficulty");
         numMoles = bundle.getInt("numMoles");
         standardDuration = bundle.getInt("duration");*/
+
+        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
+        String playerName = prefs.getString("name", "Default");
+        difficultyLevel = prefs.getInt("difficulty", 2);
+        numMoles = prefs.getInt("numMoles", 8);
+        standardDuration = prefs.getInt("duration", 20);
 
 
         initButtons();

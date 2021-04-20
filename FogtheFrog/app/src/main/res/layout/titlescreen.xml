@@ -14,13 +14,14 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top|center"
         android:gravity="center"
-        android:text="TextView" />
+        android:text="Fog the Frog"
+        android:textSize="36sp" />
 
-    <View
-        android:id="@+id/divider"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        app:srcCompat="@drawable/froggo1" />
 
     <Button
         android:id="@+id/button12"
