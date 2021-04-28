@@ -57,7 +57,26 @@ public class AddAlarm extends AppCompatActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
+        int id = v.getId();
+        if (id == R.id.button5){
+            name = (EditText)findViewById(R.id.editTextTextPersonName);
+            description = (EditText)findViewById(R.id.editTextTextMultiLine2);
 
+            thisAlarm.alarmName = name.getText().toString();
+            thisAlarm.alarmDescription = description.getText().toString();
+            DialogFragment newFragment = new AlertDialog1();
+            newFragment.show(getSupportFragmentManager(), "AlertDialog1");
+        }
+        else if(id == R.id.button){
+            DialogFragment newFragment = new DatePicker();
+            newFragment.show(getSupportFragmentManager(), "DatePicker");
+
+        }
+        else if(id == R.id.button2){
+            DialogFragment newFragment = new TimePicker();
+            newFragment.show(getSupportFragmentManager(), "TimePicker");
+
+        }
     }
 
     private void displayAlarm(){
@@ -79,7 +98,7 @@ public class AddAlarm extends AppCompatActivity implements View.OnClickListener 
             strMinute = "0" + thisAlarm.alarmMinute;
         }
         else{
-            strMinute = thisAlarm.alarmMinute;
+            strMinute = Integer.toString(thisAlarm.alarmMinute);
         }
         timeButton.setText(hour + ":" +strMinute + " " + AMPM);
     }
@@ -97,6 +116,10 @@ public class AddAlarm extends AppCompatActivity implements View.OnClickListener 
 
         @Override
         public void onDateSet(android.widget.DatePicker view, int year, int month, int dayOfMonth) {
+            AddAlarm main = (AddAlarm)getActivity();
+            main.thisAlarm.alarmYear = year;
+            main.thisAlarm.alarmMonth = month;
+            main.thisAlarm.alarmDay = dayOfMonth;
 
         }
     }
@@ -113,6 +136,10 @@ public class AddAlarm extends AppCompatActivity implements View.OnClickListener 
 
         @Override
         public void onTimeSet(android.widget.TimePicker view, int hourOfDay, int minute) {
+            AddAlarm main = (AddAlarm)getActivity();
+            main.thisAlarm.alarmHour = hourOfDay;
+            main.thisAlarm.alarmMinute = minute;
+
 
         }
     }
