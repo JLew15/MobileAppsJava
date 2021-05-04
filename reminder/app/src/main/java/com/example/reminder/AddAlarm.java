@@ -7,6 +7,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -121,6 +122,19 @@ public class AddAlarm extends AppCompatActivity implements View.OnClickListener 
             main.thisAlarm.alarmMonth = month;
             main.thisAlarm.alarmDay = dayOfMonth;
 
+            month = month+1;
+            String months = Integer.toString(month);
+            String days = Integer.toString(dayOfMonth);
+
+            if(month < 10){
+                months = "0"+months;
+            }
+            if(dayOfMonth < 10){
+                days = "0" + days;
+            }
+
+            main.dateButton.setText(months + "/" + days +"/" + year);
+
         }
     }
 
@@ -140,13 +154,52 @@ public class AddAlarm extends AppCompatActivity implements View.OnClickListener 
             main.thisAlarm.alarmHour = hourOfDay;
             main.thisAlarm.alarmMinute = minute;
 
+            String hours = Integer.toString(hourOfDay);
+            String minutes = Integer.toString(minute);
 
+            if(hourOfDay < 10){
+                hours = "0" + hours;
+            }
+            if(minute < 10){
+                minutes = "0" + minutes;
+            }
+
+            main.timeButton.setText(hours + ":" + minutes);
         }
     }
 
     public static class AlertDialog1 extends DialogFragment{
         public Dialog onCreateDialog(Bundle savedInstanceState){
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setMessage("Are you sure you want to set this alarm?");
+            builder.setCancelable(false);
+            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    AddAlarm main = (AddAlarm)getActivity();
+                    if(main.thisAlarm.alarmName == null || main.thisAlarm.alarmName.length() == 0){
+                        return;
+                    }
+                    if(main.thisAlarm.alarmDescription == null || main.thisAlarm.alarmDescription.length() == 0){
+                        return;
+                    }
+                    if (main.thisAlarm.alarmYear == 0){
+                        return;
+                    }
+                    if(main.thisAlarm.alarmHour == 0){
+                        return;
+                    }
+                    main.thisAlarm.setAlarm(main);
+                    main.clearAlarmScreen();
+                }
+            });
+            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    AddAlarm main = (AddAlarm)getActivity();
+                    main.clearAlarmScreen();
+                }
+            });
             return builder.create();
         }
     }
